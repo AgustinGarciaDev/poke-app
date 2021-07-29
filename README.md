@@ -11,3 +11,5 @@ npm install
 npm start
 
 ```
+
+Link del repositorio para ver los test : https://github.com/AgustinGarciaDev/poke-test
