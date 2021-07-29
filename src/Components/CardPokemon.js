@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const CardPokemon = ({ pokemon: { url, name } }) => {
+  const [loading, setLoading] = useState(true);
   const [imgPokemon, setImgPokemon] = useState(null);
 
   useEffect(() => {
@@ -13,6 +14,7 @@ const CardPokemon = ({ pokemon: { url, name } }) => {
     try {
       const response = await axios.get(url);
       setImgPokemon(response.data.sprites.front_default);
+      setLoading(!loading);
     } catch (err) {
       console.log(err);
     }
@@ -20,7 +22,11 @@ const CardPokemon = ({ pokemon: { url, name } }) => {
 
   return (
     <div className="containerPokemon">
-      <img src={imgPokemon} alt="Fotito pai" />
+      {loading ? (
+        <div className="spinner"></div>
+      ) : (
+        <img src={imgPokemon} alt={name} />
+      )}
       <h4>{name}</h4>
     </div>
   );

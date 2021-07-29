@@ -76,6 +76,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 24vw;
+  box-shadow: -1px 1px 11px 4px #a39e9e;
+  margin: 20px;
+  padding: 10px;
 }
 
 .containerPokemon > h4 {
@@ -83,13 +87,43 @@ body {
   font-size: 1.5rem;
 }
 
+.spinner {
+  border: 4px solid rgba(255, 0, 0, 0.931);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.listPokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
+  .containerPokemon {
+    width: 40vw;
+  }
   .search {
     width: 40vw;
   }
 }
 
 @media (max-width: 568px) {
+  .containerPokemon {
+    width: 50vw;
+  }
   .search {
     width: 60vw;
   }
@@ -99,6 +133,9 @@ body {
 }
 
 @media (max-width: 365px) {
+  .containerPokemon {
+    width: 70vw;
+  }
   .search {
     width: 70vw;
   }
