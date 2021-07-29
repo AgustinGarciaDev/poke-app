@@ -18,4 +18,4 @@ Link del repositorio para ver los test : https://github.com/AgustinGarciaDev/pok
 
 ## Construido con 🛠️
 
-* [React](http://www.dropwizard.io/1.0.2/docs/) 
+* [React](https://es.reactjs.org/) 
