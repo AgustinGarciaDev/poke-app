@@ -1,6 +1,7 @@
 import axios from "axios";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import { ToastContainer } from "react-toastify";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -45,6 +46,7 @@ const App = () => {
     <>
       <Header />
       <Home listPokemon={listPokemon} />
+      <Footer />
       <ToastContainer
         position="top-right"
         autoClose={5000}

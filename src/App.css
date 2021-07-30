@@ -1,10 +1,20 @@
+:root {
+  --typography: "VT323", monospace;
+  --color-primary: #ff0000;
+  --color-secondary: #ffffff;
+  --bg-color: #d3d3d3;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background: lightgrey;
+  background: var(--bg-color);
+}
+main {
+  height: 100vh;
 }
 .spinerContainer {
   display: flex;
@@ -15,9 +25,9 @@ body {
   height: 100vh;
 }
 .headerHome {
-  background-color: #ff0000;
-  color: white;
-  font-family: "VT323", monospace;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--typography);
   text-align: center;
   padding: 10px;
 }
@@ -30,7 +40,7 @@ body {
 }
 
 .titleHero {
-  font-family: "VT323", monospace;
+  font-family: var(--typography);
   font-size: 2rem;
   text-align: center;
 }
@@ -39,7 +49,6 @@ body {
   width: 30vw;
   height: 6vh;
   padding: 10px;
-  background: #efeeee;
   font-family: poppins;
   border: none;
   margin-top: 20px;
@@ -47,10 +56,11 @@ body {
 }
 
 .btnSearch {
-  background-color: red;
+  background-color: var(--color-primary);
   border: none;
-  color: white;
+  color: var(--color-secondary);
   height: 6vh;
+  cursor: pointer;
   width: 7vw;
 }
 
@@ -62,19 +72,19 @@ body {
 }
 
 .titleContainer {
-  font-family: "VT323", monospace;
+  font-family: var(--typography);
   text-align: center;
   margin-top: 5vh;
   font-size: 2rem;
 }
 .subTitle {
-  font-family: "VT323", monospace;
+  font-family: var(--typography);
   text-align: center;
   margin-top: 5vh;
   font-size: 1.5rem;
 }
 .textSearch {
-  font-family: "VT323", monospace;
+  font-family: var(--typography);
   text-align: center;
   margin-top: 5vh;
   font-size: 2rem;
@@ -90,12 +100,12 @@ body {
 }
 
 .containerPokemon > h4 {
-  font-family: "VT323", monospace;
+  font-family: var(--typography);
   font-size: 1.5rem;
 }
 
 .spinner {
-  border: 4px solid rgba(255, 0, 0, 0.931);
+  background-color: var(--color-primary);
   border-left-color: transparent;
   width: 36px;
   height: 36px;
@@ -118,6 +128,23 @@ body {
   justify-content: center;
 }
 
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  align-items: center;
+  height: 10vh;
+  font-family: var(--typography);
+}
+
+.btnFooter {
+  background-color: var(--color-secondary);
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   .containerPokemon {
     width: 40vw;
@@ -128,6 +155,14 @@ body {
 }
 
 @media (max-width: 568px) {
+  footer {
+    flex-direction: column;
+    padding: 20px;
+    height: 15vh;
+  }
+  .btnFooter {
+    margin-top: 20px;
+  }
   .containerPokemon {
     width: 70vw;
   }
