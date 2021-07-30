@@ -15,7 +15,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
 }
 main {
   flex-grow: 1;
@@ -176,7 +175,7 @@ footer {
     width: 60vw;
   }
   .btnSearch {
-    width: 10vw;
+    width: 17vw;
   }
 }
 
