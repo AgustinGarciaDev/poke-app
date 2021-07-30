@@ -17,8 +17,8 @@ const Home = ({ listPokemon }) => {
     } else {
       const result = listPokemon.filter(
         (pokemon) =>
-          pokemon.name.slice(0, namePokemon.length).toLowerCase() ===
-          namePokemon.toLowerCase()
+          pokemon.name.slice(0, namePokemon.trim().length).toLowerCase() ===
+          namePokemon.trim().toLowerCase()
       );
 
       if (result.length === 0) {
