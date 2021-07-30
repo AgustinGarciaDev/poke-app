@@ -10,7 +10,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+#root {
   background: var(--bg-color);
   display: flex;
   flex-direction: column;
@@ -34,13 +34,14 @@ main {
   font-family: var(--typography);
   text-align: center;
   padding: 10px;
+  height: 10vh;
 }
 
 .containerHero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6vw;
+  padding-top: 6vw;
 }
 
 .titleHero {
@@ -140,6 +141,7 @@ footer {
   align-items: center;
   height: 10vh;
   font-family: var(--typography);
+  text-align: center;
 }
 
 .btnFooter {
@@ -179,6 +181,9 @@ footer {
 }
 
 @media (max-width: 365px) {
+  footer {
+    height: 25vh;
+  }
   .containerPokemon {
     width: 70vw;
   }
