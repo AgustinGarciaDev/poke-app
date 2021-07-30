@@ -12,9 +12,13 @@
 }
 body {
   background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 main {
-  height: 100vh;
+  flex-grow: 1;
 }
 .spinerContainer {
   display: flex;
@@ -161,7 +165,7 @@ footer {
     height: 15vh;
   }
   .btnFooter {
-    margin-top: 20px;
+    margin-top: 9px;
   }
   .containerPokemon {
     width: 70vw;
