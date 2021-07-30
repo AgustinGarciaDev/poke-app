@@ -11,6 +11,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetchPokemon();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const fetchPokemon = async () => {
@@ -18,7 +19,6 @@ const App = () => {
       const response = await axios.get(
         "https://pokeapi.co/api/v2/pokemon?limit=1118"
       );
-      console.log(response.data.results.length);
       setListPokemon(response.data.results);
       setLoading(!loading);
     } catch (err) {
@@ -53,7 +53,6 @@ const App = () => {
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
-        draggable
         pauseOnHover
       />
       <ToastContainer />
